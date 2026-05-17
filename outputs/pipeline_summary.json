@@ -1,0 +1,138 @@
+{
+  "calidad_clientes": {
+    "rows": 5254,
+    "cols": 8,
+    "duplicates": 0,
+    "nulls_total": 75,
+    "nulls_by_col": {
+      "age_alicorp": 75
+    },
+    "memory_mb": 0.752
+  },
+  "calidad_transacciones": {
+    "rows": 392442,
+    "cols": 6,
+    "duplicates": 6,
+    "nulls_total": 0,
+    "nulls_by_col": {},
+    "memory_mb": 34.809
+  },
+  "clientes_postlimpieza": {
+    "rows": 5254,
+    "cols": 10,
+    "duplicates": 0,
+    "nulls_total": 0,
+    "nulls_by_col": {},
+    "memory_mb": 0.832
+  },
+  "transacciones_postlimpieza": {
+    "rows": 392442,
+    "cols": 11,
+    "duplicates": 6,
+    "nulls_total": 0,
+    "nulls_by_col": {},
+    "memory_mb": 66.247
+  },
+  "periodo_transacciones": {
+    "min": "2020-07-14",
+    "max": "2020-12-12",
+    "dias": 151
+  },
+  "target_distribution": {
+    "n": 5254,
+    "counts": {
+      "0": 4399,
+      "1": 855
+    },
+    "proportions": {
+      "0": 0.8372668443090978,
+      "1": 0.16273315569090216
+    }
+  },
+  "n_features_finales": 46,
+  "n_clientes_finales": 5254,
+  "cv_scores": {
+    "LogisticRegression": {
+      "mean": 0.5113244394277768,
+      "std": 0.015222926549789278
+    },
+    "RandomForest": {
+      "mean": 0.49022298450899815,
+      "std": 0.015005966248891231
+    },
+    "GradientBoosting": {
+      "mean": 0.4901215782103538,
+      "std": 0.02342358391569446
+    }
+  },
+  "best_model": "LogisticRegression",
+  "test_metrics_threshold_default": {
+    "roc_auc": 0.5014287612971823,
+    "pr_auc": 0.16117988011419637,
+    "accuracy": 0.5080875356803045,
+    "precision": 0.15810276679841898,
+    "recall": 0.4678362573099415,
+    "f1": 0.2363367799113737,
+    "threshold": 0.5
+  },
+  "test_metrics_threshold_optimal": {
+    "roc_auc": 0.5014287612971823,
+    "pr_auc": 0.16117988011419637,
+    "accuracy": 0.27783063748810655,
+    "precision": 0.1696629213483146,
+    "recall": 0.8830409356725146,
+    "f1": 0.2846371347785108,
+    "threshold": 0.4354128418900641
+  },
+  "confusion_matrix_optimal": [
+    [
+      141,
+      739
+    ],
+    [
+      20,
+      151
+    ]
+  ],
+  "classification_report_optimal": "              precision    recall  f1-score   support\n\n           0       0.88      0.16      0.27       880\n           1       0.17      0.88      0.28       171\n\n    accuracy                           0.28      1051\n   macro avg       0.52      0.52      0.28      1051\nweighted avg       0.76      0.28      0.27      1051\n",
+  "business_impact": {
+    "total_uplift_esperado_S/.": 2137072.187024334,
+    "uplift_top_3_deciles_S/.": 908363.2419759601,
+    "uplift_top_3_pct_total": 0.4250503317067487
+  },
+  "tiers": [
+    {
+      "tier": "Tier A - Activacion premium",
+      "clientes": 4,
+      "score_promedio": 0.7192528893205982,
+      "ventas_periodo": 28821.0,
+      "ticket_promedio": 7205.25,
+      "target_real_rate": 0.5
+    },
+    {
+      "tier": "Tier B - Activacion estandar",
+      "clientes": 4842,
+      "score_promedio": 0.505858760105911,
+      "ventas_periodo": 184572376.0,
+      "ticket_promedio": 38119.03676166873,
+      "target_real_rate": 0.1674927715819909
+    },
+    {
+      "tier": "Tier C - Nurturing",
+      "clientes": 402,
+      "score_promedio": 0.357752373745885,
+      "ventas_periodo": 13561773.0,
+      "ticket_promedio": 33735.753731343284,
+      "target_real_rate": 0.1044776119402985
+    },
+    {
+      "tier": "Tier D - Mantenimiento",
+      "clientes": 6,
+      "score_promedio": 0.09327175723939025,
+      "ventas_periodo": 121598.0,
+      "ticket_promedio": 20266.333333333332,
+      "target_real_rate": 0.0
+    }
+  ],
+  "best_threshold_f1": 0.4354128418900641
+}
