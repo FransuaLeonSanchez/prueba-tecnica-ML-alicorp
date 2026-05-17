@@ -1,0 +1,12 @@
+*.csv
+*.pdf
+*.ipynb
+*.py
+src/
+notebooks/
+outputs/
+assets/
+graficos/
+.venv/
+__pycache__/
+requirements.txt
