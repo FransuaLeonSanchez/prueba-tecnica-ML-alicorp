@@ -26,7 +26,7 @@ Modelo predictivo de potencial de incremental de venta para clientes del canal b
 ├── assets/                      logo y foto usados en la presentación
 ├── run_pipeline.py              corre el pipeline end-to-end
 ├── generate_presentation.py     genera el HTML de la presentación
-└── presentacion_alicorp.html    presentación final (10 slides)
+└── index.html                   presentación final (10 slides)
 ```
 
 ## Setup
@@ -54,7 +54,7 @@ python generate_presentation.py
 Abrir la presentación:
 
 ```bash
-xdg-open presentacion_alicorp.html
+xdg-open index.html
 ```
 
 Abrir el notebook:

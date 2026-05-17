@@ -6,7 +6,7 @@ ROOT     = Path(__file__).resolve().parent
 GRAFICOS = ROOT / "graficos"
 ASSETS   = ROOT / "assets"
 OUTPUTS  = ROOT / "outputs"
-OUT_HTML = ROOT / "presentacion_alicorp.html"
+OUT_HTML = ROOT / "index.html"
 
 def b64(p: Path) -> str:
     return base64.b64encode(p.read_bytes()).decode()
